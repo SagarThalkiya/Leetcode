@@ -6,12 +6,12 @@ public:
         return checkPalindrome(filteredString, 0);
     }
 
-private:
-    string preprocessString(const string& s) {
+private: // keep it private it good practise
+    string preprocessString(const string& s) { // making string const will not allow for modification of string externally through proccess
         string result;
         for (char c : s) {
-            if (isalnum(c)) {
-                result += tolower(c);
+            if (isalnum(c)) {  // add only alphanumeric characters 
+                result += tolower(c); // converts to lower case
             }
         }
         return result;

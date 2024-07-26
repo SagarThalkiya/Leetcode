@@ -2,29 +2,29 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int n = nums.size();
-//         int ans =0;
-//         sort(nums.begin(),nums.end());
+        int ans =0;
+        sort(nums.begin(),nums.end());
+        for(int i =0;i<n;i++){
+            ans = ans ^ nums[i];
+        }
+        
+        
+        
+        
+        
+//         map<int,int> mpp;
 //         for(int i =0;i<n;i++){
-//             ans = ans ^ nums[i];
+
+//           mpp[nums[i]]++;
 //         }
         
-        
-        
-        
-        
-        map<int,int> mpp;
-        for(int i =0;i<n;i++){
+//         for(auto it : mpp){
 
-          mpp[nums[i]]++;
-        }
+//             if(it.second < 2){
+//                 return it.first;
+//             }
+//         }
         
-        for(auto it : mpp){
-
-            if(it.second < 2){
-                return it.first;
-            }
-        }
-        
-        return 0;
+        return ans;
     }  
 };

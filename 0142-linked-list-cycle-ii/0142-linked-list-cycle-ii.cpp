@@ -15,7 +15,7 @@ class Solution {
 
     // Move the slow pointer one step and the fast pointer two steps at a time through the linked list,
     // until they either meet or the fast pointer reaches the end of the list.
-    while (fast && fast->next) {
+    while (fast != NULL && fast->next != NULL) {
       slow = slow->next;
       fast = fast->next->next;
       if (slow == fast) {
@@ -33,6 +33,6 @@ class Solution {
 
     // If the fast pointer reaches the end of the list without meeting the slow pointer,
     // there is no cycle in the linked list. Return nullptr.
-    return NULL;
+    return nullptr;
   }
 };

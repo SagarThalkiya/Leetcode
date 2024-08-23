@@ -18,7 +18,7 @@ public:
         }
         v.push_back(root -> val);
         preorderTraversal(root -> left);
-        preorderTraversal(root -> right);
+        preorderTraversal (root -> right);
         
       return v;
     }
